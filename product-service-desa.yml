@@ -3,4 +3,4 @@ server:
 
 encrypt:
   key: mitocode-secrets
-    #  value: {cipher}02460d8ddcfc37ff062428e080687567a81ffd8078e75e4413d11ecaff18544e
+  value: '{cipher}e53741398c4ab6b709362860322119b683ba7e8662ea2d83660666bb75d79537'
