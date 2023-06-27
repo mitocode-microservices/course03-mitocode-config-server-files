@@ -8,16 +8,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
+### Mongo database configuration
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      username: mitocode
-      password: mitocode  
-      database: mitocodedb
-      # uri: mongodb://mitocode:mitocode@localhost:27017
-      authentication-database: admin
+      uri: mongodb://mitocode:mitocode@localhost:27017/mitocodedb?authSource=admin
 
 encrypt:
   key: mitocode
