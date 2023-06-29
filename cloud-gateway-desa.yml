@@ -23,4 +23,4 @@ spring:
             # - CustomFilterMitocode=MitocodeKey, MitocodeValue
             - AddRequestHeader=MitocodeKey, MitocodeValue
             - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
-            # - AddRequestParameter=role, ROLE_USER
+            - AddRequestParameter=role, ROLE_USER
