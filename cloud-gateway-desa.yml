@@ -21,8 +21,3 @@ spring:
           filters:
             - StripPrefix=2
             - MitocodeFilter=MitocodeKey, MitocodeValue
-            
-            # - name: CustomFilter
-            #   args:
-            #     headerKey: MitocodeKey
-            #     headerValue: MitocodeValue
