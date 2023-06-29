@@ -20,4 +20,7 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
-            - CustomFilterMitocode=MitocodeKey, MitocodeValue
+            # - CustomFilterMitocode=MitocodeKey, MitocodeValue
+            - AddRequestHeader=MitocodeKey, MitocodeValue
+            - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
+            # - AddRequestParameter=role, ROLE_USER
