@@ -1,0 +1,26 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9010}
+
+# Eureka Client configuration
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# Actuator configuration
+info:
+  app:
+    name: Client Service Microservice
+    description: Módulo de la arquitectura que consume los microservicios User Service y Product Service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator
+  info:
+    env:
+      enabled: true
