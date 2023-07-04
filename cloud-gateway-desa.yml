@@ -14,6 +14,14 @@ spring:
   cloud:
     gateway:
       routes: 
+
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/product-service/**
+          filters:
+            - StripPrefix=2
+
         - id: user-service
           uri: lb://user-service
           predicates:
@@ -26,7 +34,7 @@ spring:
             #   args:
             #     headerKey: MitocodeKey
             #     headerValue: MitocodeValue
-            
+
             # - AddRequestHeader=MitocodeKey, MitocodeValue
             # - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
             - AddRequestParameter=role, ROLE_USER
