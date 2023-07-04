@@ -21,6 +21,10 @@ spring:
           filters:
             - StripPrefix=2
             - CustomFilterMitocode=MitocodeKey, MitocodeValue
+            # - name: CustomFilter:
+            #   args:
+            #     headerKey: MitocodeKey
+            #     headerValue: MitocodeValue
             # - AddRequestHeader=MitocodeKey, MitocodeValue
             # - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
             # - AddRequestParameter=role, ROLE_USER
