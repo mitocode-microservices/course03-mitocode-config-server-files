@@ -28,7 +28,7 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
-            - CustomFilterMitocode=MitocodeKey, MitocodeValue
+            #wmeza- CustomFilterMitocode=MitocodeKey, MitocodeValue
 
             # - name: CustomFilter:
             #   args:
