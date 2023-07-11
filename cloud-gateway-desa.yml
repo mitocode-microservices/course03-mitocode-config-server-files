@@ -9,6 +9,21 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
+# Circuit Breaker configuration
+resilience4j:
+  circuitbreaker:
+    configs:
+      circuitBreakerProduct:
+        slidingWindowSize: 16
+        failureRateThreshold: 75
+        waitDurationInOpenState: 30s
+        permittedNumberOfCallsInHalfOpenState: 10
+        slowCallDurationThreshold: 2s
+        slowCallRateThreshold: 50
+    instances:
+      product-cb:
+        base-config: circuitBreakerProduct
+
 # Cloud Gateway Routes
 spring:
   cloud:
@@ -21,6 +36,9 @@ spring:
             - Path=/api/product-service/**
           filters:
             - StripPrefix=2
+            - name: CircuitBreaker
+              args:
+                name: product-cb
 
         - id: user-service
           uri: lb://user-service
