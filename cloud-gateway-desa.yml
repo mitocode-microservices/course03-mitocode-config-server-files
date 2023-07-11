@@ -26,7 +26,7 @@ resilience4j:
   timelimiter:
     configs:
       circuitBreakerProduct:
-        timeoutDuration: 2s
+        timeoutDuration: 1300
     instances:
       product-cb:
         base-config: circuitBreakerProduct
