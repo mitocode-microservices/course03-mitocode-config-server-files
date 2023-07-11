@@ -28,7 +28,7 @@ resilience4j:
       timeLimiterProduct:
         timeoutDuration: 2s
     instances:
-      product-tl:
+      default:
         base-config: timeLimiterProduct
 
 # Cloud Gateway Routes
@@ -46,9 +46,6 @@ spring:
             - name: CircuitBreaker
               args:
                 name: product-cb
-            - name: TimeLimiter
-              args:
-                name: product-tl
 
         - id: user-service
           uri: lb://user-service
