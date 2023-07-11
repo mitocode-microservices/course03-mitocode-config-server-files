@@ -46,7 +46,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: product-cb
-            - name: timeLimiter
+            - name: TimeLimiter
               args:
                 name: product-tl
 
