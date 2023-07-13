@@ -26,7 +26,7 @@ resilience4j:
   timelimiter:
     configs:
       timeLimiterProduct:
-        timeoutDuration: 1300
+        timeoutDuration: 1700
     instances:
       product-cb:
         base-config: timeLimiterProduct
