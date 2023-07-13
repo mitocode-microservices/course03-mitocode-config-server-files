@@ -1,0 +1,8 @@
+server:
+  port: 8088
+
+mitocode:
+  security:
+    client: mitocode
+    secret: mitocode
+    key: mitocode
