@@ -15,7 +15,6 @@ spring:
       uri: mongodb://mitocode:mitocode@localhost:27017/mitocodedb?authSource=admin
 
 ### Postgresql database configuration
-
   jpa:
     hibernate:
       ddl-auto: update
