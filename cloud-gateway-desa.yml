@@ -67,3 +67,8 @@ spring:
             - AddRequestParameter=role, ROLE_USER
   main:
     web-application-type: reactive
+
+
+mitocode:
+  security:
+    key: b5c6bc8697ca08fd98469ddce4d9ae9f45d433823364d8299221c0c7b376014c9a6998b0ddcac89b760731ec79a26ae4abe29116ecd3f188a2c0bbd340aa3bb5cde2754d4e56256ed05b470d5392814d699f7a13844cabfc6217fd67f444e6e3
