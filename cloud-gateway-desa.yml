@@ -69,11 +69,11 @@ spring:
     web-application-type: 
     allow-bean-definition-overriding: true
 
-  security:
-    user:
-      name: jchoy
-      password: jchoy
-      roles: ROLE_ADMIN
+  # security:
+  #   user:
+  #     name: jchoy
+  #     password: jchoy
+  #     roles: ROLE_ADMIN
 
 mitocode:
   security:
