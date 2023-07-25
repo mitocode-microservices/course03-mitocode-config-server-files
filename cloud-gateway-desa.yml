@@ -67,6 +67,8 @@ spring:
             - AddRequestParameter=role, ROLE_USER
   main:
     web-application-type: 
+    allow-bean-definition-overriding: true
+
   security:
     user:
       name: jchoy
