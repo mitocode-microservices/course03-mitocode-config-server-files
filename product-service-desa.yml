@@ -51,4 +51,4 @@ springdoc:
     enabled: true
   swagger-ui:
     path: swagger-ui.html
-    enabled: false
+    enabled: true
