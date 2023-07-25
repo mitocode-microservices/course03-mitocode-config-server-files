@@ -66,8 +66,12 @@ spring:
             # - AddResponseHeader=MitocodeHeader, MitocodeHeaderValue
             - AddRequestParameter=role, ROLE_USER
   main:
-    web-application-type: reactive
-
+    web-application-type: 
+  security:
+    user:
+      name: jchoy
+      password: jchoy
+      roles: manager
 
 mitocode:
   security:
