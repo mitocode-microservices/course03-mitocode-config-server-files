@@ -73,7 +73,7 @@ spring:
     user:
       name: jchoy
       password: jchoy
-      role: manager
+      roles: ADMIN
 
 mitocode:
   security:
