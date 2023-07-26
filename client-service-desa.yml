@@ -39,14 +39,3 @@ management:
   info:
     env:
       enabled: true
-  tracing:
-    sampling:
-      probability: 1.0
-
-logging:
-  level:
-    org:
-      springframework:
-        web: DEBUG
-  pattern:
-    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'

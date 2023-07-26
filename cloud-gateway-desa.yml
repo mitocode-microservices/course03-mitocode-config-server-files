@@ -88,9 +88,6 @@ management:
   info:
     env:
       enabled: true
-  tracing:
-    sampling:
-      probability: 1.0 
 
 springdoc:
   api-docs:
@@ -99,12 +96,3 @@ springdoc:
   swagger-ui:
     path: swagger-ui.html
     enabled: true
-  show-spring-cloud-functions: true
-
-logging:
-  level:
-    org:
-      springframework:
-        web: DEBUG
-  pattern:
-    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
