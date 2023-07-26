@@ -56,3 +56,11 @@ springdoc:
     path: swagger-ui.html
     enabled: true
   show-actuator: true
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+  pattern:
+    level: %5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
