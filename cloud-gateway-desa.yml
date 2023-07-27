@@ -49,6 +49,22 @@ spring:
                 statusCode: 400, 401, 403, 500, 503, 504
                 fallbackUri: forward:/api/user-service/user
 
+        - id: product-query-service
+          uri: lb://product-query-service
+          predicates:
+            - Path=/api/product-query-service/**
+            - Weight=product-query, 90
+          filters:
+            - StripPrefix=2
+
+        - id: product-query-service-tobe
+          uri: lb://product-query-service-tobe
+          predicates:
+            - Path=/api/product-query-service/**
+            - Weight=product-query, 10
+          filters:
+            - StripPrefix=2
+
         - id: user-service
           uri: lb://user-service
           predicates:
