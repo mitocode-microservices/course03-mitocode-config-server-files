@@ -12,21 +12,8 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://mitocode:mitocode@localhost:27017/mitocodedb?authSource=admin
+      uri: mongodb://mitocode:mitocode@localhost:27018/mitocodedb?authSource=admin
 
-### Postgresql database configuration
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show: true
-    properties:
-      hibernate:
-        format_sql: true
-#        dialect: org.hibernate.dialect.PostgreSQL81Dialect
-  datasource:
-    url: 'jdbc:postgresql://localhost:5432/mitocodedb'
-    username: mitocode
-    password: mitocode
 
 # Actuator configuration
 info:
@@ -64,11 +51,3 @@ logging:
         web: DEBUG
   pattern:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
-
-
-
-kafka:
-  mitocode:
-    server: 127.0.0.1
-    port: 9092
-    topic: mitocode
