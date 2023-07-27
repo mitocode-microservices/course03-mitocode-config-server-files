@@ -12,7 +12,11 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://mitocode:mitocode@localhost:27018/mitocodedb?authSource=admin
+      host: localhost
+      port: 27018
+      database: mitocodedb
+      uri: mongodb://mitocode:mitocode@localhost:27018
+      authentication-database: admin
 
 
 # Actuator configuration
