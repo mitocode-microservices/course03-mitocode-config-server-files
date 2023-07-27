@@ -20,9 +20,9 @@ spring:
   data:
     mongodb:
       host: localhost
-      port: 27017
+      port: 27018
       database: mitocodedb
-      uri: mongodb://mitocode:mitocode@localhost:27017
+      uri: mongodb://mitocode:mitocode@localhost:27018
       authentication-database: admin
 
 # Kafka Configuration
