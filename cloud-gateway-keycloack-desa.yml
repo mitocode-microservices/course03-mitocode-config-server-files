@@ -53,7 +53,7 @@ spring:
           uri: lb://product-query-service
           predicates:
             - Path=/api/product-query-service/**
-            - Weight=product-query, 99
+            - Weight=product-query, 1
           filters:
             - StripPrefix=2
 
@@ -61,7 +61,7 @@ spring:
           uri: lb://product-query-service-tobe
           predicates:
             - Path=/api/product-query-service/**
-            - Weight=product-query, 1
+            - Weight=product-query, 99
           filters:
             - StripPrefix=2
 
