@@ -136,4 +136,4 @@ jwt:
   auth:
     converter:
       resource-id: external-client
-      principal-attribute: user
+      principal-attribute: preferred_username
