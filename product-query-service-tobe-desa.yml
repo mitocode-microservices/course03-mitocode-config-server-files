@@ -6,7 +6,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA.SERVER.HOSTNAME:http://localhost:8761/eureka}
 
 ### Mongo database configuration
 spring:
@@ -15,10 +15,9 @@ spring:
       host: localhost
       port: 27018
       database: mitocodedb
-      uri: mongodb://mitocode:mitocode@localhost:27018
+      uri: ${MONGODB.URL.CONNECTION:mongodb://mitocode:mitocode@localhost:27018}
       authentication-database: admin
-
-
+      
 # Actuator configuration
 info:
   app:
